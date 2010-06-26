@@ -72,3 +72,9 @@ config W90P910_ETH
 	help
 	  Say Y here if you want to use built-in Ethernet ports
 	  on w90p910 processor.
+
+config ARM_CS8900
+	tristate "CS8900 support"
+	depends on NET_ETHERNET && ARM
+	help
+	  support for cs8900 chipset based Ethernet cards , if you  have a network card of this type

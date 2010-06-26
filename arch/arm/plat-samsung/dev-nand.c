@@ -80,7 +80,7 @@ static int __init s3c_nand_copy_set(struct s3c2410_nand_set *set)
 	return 0;
 }
 
-void __init s3c_nand_set_platdata(struct s3c2410_platform_nand *nand)
+void /*__init*/ s3c_nand_set_platdata(struct s3c2410_platform_nand *nand)
 {
 	struct s3c2410_platform_nand *npd;
 	int size;
