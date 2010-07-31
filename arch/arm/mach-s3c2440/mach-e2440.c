@@ -150,10 +150,10 @@ static struct mtd_partition e2440_default_nand_part[] __initdata = {
 
 static struct s3c2410_nand_set e2440_nand_sets[] __initdata = {
 	[0] = {
-		.name		= "nand",
+		.name		= "e2440-nand",
 		.nr_chips	= 1,
-		.nr_partitions	= ARRAY_SIZE(e2440_default_nand_part),
-		.partitions	= e2440_default_nand_part,
+//		.nr_partitions	= ARRAY_SIZE(e2440_default_nand_part),
+//		.partitions	= e2440_default_nand_part,
 		.flash_bbt 	= 1, /* we use u-boot to create a BBT */
 	},
 };
