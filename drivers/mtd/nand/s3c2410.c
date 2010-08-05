@@ -839,7 +839,11 @@ static void s3c2410_nand_init_chip(struct s3c2410_nand_info *info,
 
 		}
 	} else {
+		#ifdef CONFIG_MACH_E2440
+		chip->ecc.mode		= NAND_ECC_NONE;
+		#else
 		chip->ecc.mode	    = NAND_ECC_SOFT;
+		#endif
 	}
 
 	if (set->ecc_layout != NULL)
